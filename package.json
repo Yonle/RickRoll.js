@@ -1,0 +1,29 @@
+{
+  "name": "rickroll.js",
+  "version": "0.0.0",
+  "description": "Some javascript module that used for rickrolling people in website.",
+  "main": "RickRoll.js",
+  "scripts": {
+    "test": "node RickRoll.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yonle/RickRoll.js.git"
+  },
+  "keywords": [
+    "RickRoll",
+    "NeverGonnaGiveYouUp",
+    "RickAstley",
+    "JavaScript",
+    "meme",
+    "jokes",
+    "prank",
+    "troll"
+  ],
+  "author": "Yonle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yonle/RickRoll.js/issues"
+  },
+  "homepage": "https://github.com/Yonle/RickRoll.js#readme"
+}
