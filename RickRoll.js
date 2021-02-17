@@ -33,7 +33,7 @@ var rickroll = function (opt) {
   };
   console.log("[RickRoll.js] Now listening to some click event....");
 };
-rickroll.video = "http://localhost:8001/NeverGonnaGiveYouUp.mp4";
+rickroll.video = "https://yonle.github.io/RickRoll.js/vid.mp4";
 rickroll.showup = function () {
   console.log("[RickRoll.js] rickroll.showup() called.");
   var video = document.createElement("video");
