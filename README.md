@@ -43,3 +43,5 @@ There's alot of method in RickRoll.js to RickRoll people in your website:
    ```
  - `rickroll.video` A variable that contains RickRoll Video(raw) URL. You can also change it.
  
+## Community
+Any question or doubt can contact us at our [discord server](https://discord.gg/9S3ZCDR).
