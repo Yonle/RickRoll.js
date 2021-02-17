@@ -33,7 +33,7 @@ var rickroll = function (opt) {
   };
   console.log("[RickRoll.js] Now listening to some click event....");
 };
-rickroll.video = "https://github.com/Yonle/RickRoll.js/blob/main/vid.mp4?raw=true"
+rickroll.video = "https://github.com/Yonle/RickRoll.js/blob/main/vid.mp4?raw=true";
 rickroll.showup = function () {
   console.log("[RickRoll.js] rickroll.showup() called.");
   document.open();
