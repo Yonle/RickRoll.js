@@ -15,7 +15,7 @@ Add this script to your page
 ```
 Or this:
 ```html
-<script src="https://yonle.github.com/RickRoll.js/RickRoll.js"></script>
+<script src="https://yonle.github.io/RickRoll.js/RickRoll.js"></script>
 <script>
   rickroll();
 </script>
