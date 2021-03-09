@@ -20,7 +20,6 @@ Or this:
   rickroll();
 </script>
 ```
-
 RickRoll.js also available at [jsdelivr](https://cdn.jsdelivr.net/npm/rickroll.js).
 ```html
 <script src="https://cdn.jsdelivr.net/npm/rickroll.js"></script>
