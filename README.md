@@ -15,13 +15,6 @@ Add this script to your page
 ```
 Or this:
 ```html
-<script src="https://yonle.github.io/RickRoll.js/RickRoll.js"></script>
-<script>
-  rickroll();
-</script>
-```
-RickRoll.js also available at [jsdelivr](https://cdn.jsdelivr.net/npm/rickroll.js).
-```html
 <script src="https://cdn.jsdelivr.net/npm/rickroll.js"></script>
 <script>
   rickroll();
