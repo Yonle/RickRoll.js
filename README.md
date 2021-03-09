@@ -20,6 +20,14 @@ Or this:
   rickroll();
 </script>
 ```
+
+RickRoll.js also available at [jsdelivr](https://cdn.jsdelivr.net/npm/rickroll.js).
+```html
+<script src="https://cdn.jsdelivr.net/npm/rickroll.js"></script>
+<script>
+  rickroll();
+</script>
+```
 ## Method
 There's alot of method in RickRoll.js to RickRoll people in your website:
  - `rickroll()` A main function of RickRoll.js
