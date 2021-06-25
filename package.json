@@ -1,6 +1,6 @@
 {
   "name": "rickroll.js",
-  "version": "0.0.0",
+  "version": "1.0.0-s",
   "description": "Some javascript module that used for rickrolling people in website.",
   "main": "RickRoll.js",
   "scripts": {

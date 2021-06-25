@@ -1,16 +1,12 @@
 var rickroll = function (opt) {
-  if (!opt) {
-	  window.onclick = rickroll.showup;
-	  window.ontouchmove = rickroll.showup;
+  if (typeof(opt) !== 'object') {
+	  opt = { click: true };
   };
-  if (opt) {
-	if (typeof(opt) !== 'object') {
-		throw new TypeError("The 'option' argument must be type of object, Received instead of "+typeof(opt));
-		return false;
-	};
+  
+  if (opt && typeof(opt) === 'object') {
 	if (opt.click) {
 		window.onclick = rickroll.showup;
-		window.onclick = rickroll.showup;
+		window.ontouchmove = rickroll.showup;
 	};
 	if (opt.scroll) window.onscroll = rickroll.showup;
 	if (opt.mousemove) window.onmousemove = rickroll.showup;
@@ -31,14 +27,19 @@ var rickroll = function (opt) {
 	};
 	if (opt.resize) window.onresize = rickroll.showup;
   };
-  console.log("[RickRoll.js] Now listening to some click event....");
+  
+  return true;
 };
+
 rickroll.video = "https://yonle.github.io/RickRoll.js/vid.mp4";
-rickroll.showup = function () {
-  console.log("[RickRoll.js] rickroll.showup() called.");
+rickroll.showup = async function ShowUp(opt = {}) {
+  if (typeof(opt) !== 'object') opt = {}
+  if (!opt.force && rickroll.showup.only_once && rickroll.playing) {
+  	return false;
+  }
   var video = document.createElement("video");
   video.load();
-  video.src = rickroll.video;
+  video.src = opt.src || rickroll.video;
   video.style.display = "block";
   video.style.width = "100%";
   video.style.height = "auto";
@@ -47,10 +48,25 @@ rickroll.showup = function () {
   video.style.bottom = "0";
   video.style.left = "0";
   video.style.right = "0";
-  video.loop = true;
-  video.play().then(() => {
+  video.loop = opt.loop || rickroll.showup.loop || true;
+  rickroll.playing = true;
+  try {
+  	await video.play();
 	document.open();
 	document.appendChild(video);
 	document.close();
-  }).catch(console.error);
+	return true;
+  } catch (error) {
+  	rickroll.playing = false;
+  	return error;
+  }
 };
+
+rickroll.showup.only_once = true;
+rickroll.showup.loop = true;
+rickroll.playing = false;
+
+// NodeJS Support
+if (typeof(module) === 'object' && module.exports) {
+	module.exports = rickroll;
+}
